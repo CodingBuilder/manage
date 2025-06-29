@@ -23,18 +23,15 @@ body {
   background-size: 800px;
   background-position: 130% -15%;
 }
-
 .testimonials {
   background-image: url("../images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
   background-position: -700px 0;
 }
-
 .cta {
   background-image: url("../images/bg-simplify-section-desktop.svg");
   background-repeat: no-repeat;
 }
-
 @media (max-width: 767px) {
   body {
     background-position: 180px -10%;
@@ -42,4 +39,36 @@ body {
   .cta {
     background-image: url("../images/bg-simplify-section-mobile.svg");
   }
+}
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 12px;
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 10px;
+}
+.menu.show {
+  display: flex;
+  top: 80px;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.01)
+  );
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.email-input.error {
+  border: 1px red solid;
+  color: red;
 }

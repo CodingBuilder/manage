@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./style.css" rel="stylesheet" />
     <title>Manage Landing Page</title>
   </head>
-  <body class="overflow-x-hidden">
+  <body class="font-['Be Vietnam Pro'] overflow-x-hidden">
     <!-- Navigation Bar -->
     <nav class="container mx-auto p-6">
       <div class="flex items-center justify-between">
@@ -47,11 +53,48 @@
         >
 
         <!-- Hamburger Icon -->
-        <div class="hamburger-icon relative h-7 w-10 md:hidden">
-          <span class="absolute top-0 h-1.5 w-full bg-dark-blue"></span>
-          <span class="absolute top-2.75 h-1.5 w-full bg-dark-blue"></span>
-          <span class="absolute bottom-0 h-1.5 w-full bg-dark-blue"></span>
+        <div class="hamburger-icon relative z-100 h-7 w-10 md:hidden">
+          <span
+            class="absolute top-0 h-1.5 w-full bg-dark-blue transition-all"
+          ></span>
+          <span
+            class="absolute top-2.75 h-1.5 w-full bg-dark-blue transition-all"
+          ></span>
+          <span
+            class="absolute bottom-0 h-1.5 w-full bg-dark-blue transition-all"
+          ></span>
         </div>
+
+        <!-- Hamburger Menu -->
+        <ul
+          class="menu absolute top-[-100%] left-1/2 z-100 w-[80%] -translate-x-1/2 flex-col space-y-10 rounded bg-white p-8 text-center font-bold text-dark-blue transition-all"
+        >
+          <li
+            class="cursor-pointer transition-colors hover:text-dark-grayish-blue"
+          >
+            Pricing
+          </li>
+          <li
+            class="cursor-pointer transition-colors hover:text-dark-grayish-blue"
+          >
+            Product
+          </li>
+          <li
+            class="cursor-pointer transition-colors hover:text-dark-grayish-blue"
+          >
+            About Us
+          </li>
+          <li
+            class="cursor-pointer transition-colors hover:text-dark-grayish-blue"
+          >
+            Career
+          </li>
+          <li
+            class="cursor-pointer transition-colors hover:text-dark-grayish-blue"
+          >
+            Community
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- Hero Section -->
@@ -94,7 +137,7 @@
         <!-- Text -->
         <div class="text m-0 mb-10 flex flex-col space-y-10 md:w-1/2">
           <h2
-            class="text-center text-3xl font-bold text-dark-blue md:max-w-xl md:text-left md:text-4xl md:leading-17"
+            class="text-center text-3xl font-bold text-dark-blue md:max-w-xl md:text-left md:text-5xl md:leading-17"
           >
             What's Different About Manage?
           </h2>
@@ -353,16 +396,23 @@
         </div>
         <!-- Input Container -->
         <div class="flex flex-col md:justify-between">
-          <div class="flex items-center justify-center space-x-2">
-            <input
-              type="text"
-              placeholder="Updates in your inbox..."
-              class="rounded-4xl border-none bg-white px-4 py-3 outline-none"
-            />
-            <a
-              href="#"
-              class="rounded-full bg-bright-red px-6 pt-4 pb-3 font-bold text-white transition hover:bg-bright-red-light"
-              >Go</a
+          <div>
+            <div class="flex items-center justify-center space-x-2">
+              <input
+                type="text"
+                placeholder="Updates in your inbox..."
+                class="email-input rounded-4xl border-none bg-white px-4 py-3 outline-none"
+              />
+              <button
+                href="#"
+                class="email-button rounded-full bg-bright-red px-6 pt-4 pb-3 font-bold text-white transition hover:bg-bright-red-light"
+              >
+                Go
+              </button>
+            </div>
+            <i
+              class="error mt-3 ml-20 hidden text-left text-sm text-red-500 md:mt-0 md:ml-5"
+              >Please insert a valid email</i
             >
           </div>
           <p class="hidden w-full text-right text-dark-grayish-blue md:block">
@@ -371,5 +421,6 @@
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
